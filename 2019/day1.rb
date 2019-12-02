@@ -6,14 +6,14 @@ def compute_fuel(mass)
 end
 
 # Task 1
-fuel = BasicFileReader.lines(file_name: 'inputs/day1')
+fuel = BasicFileReader.lines(file_name: './inputs/day1')
                       .map { |nr| compute_fuel(nr.to_i) }
                       .reduce(:+)
 
 puts fuel # 3147032
 
 # Task 2
-fuel = BasicFileReader.lines(file_name: 'inputs/day1') do |nr|
+fuel = BasicFileReader.lines(file_name: './inputs/day1') do |nr|
   fuel = compute_fuel(nr.to_i)
   total_fuel = fuel
 
