@@ -4,8 +4,8 @@ require 'basic_file_reader'
 
 adapters = BasicFileReader.lines(file_name: 'input').map(&:to_i).sort
 
-# Monkeypatch the [] for arrays so that the default value for an array will be 0 instad of nil
-#   this way we don't need to add .to_i or exatra checks
+# Monkeypatch the [] for arrays so that the default value for an array will
+#   be 0 instad of nil; this way we don't need to add .to_i or exatra checks
 class Array
   def [](index)
     at(index) || 0
